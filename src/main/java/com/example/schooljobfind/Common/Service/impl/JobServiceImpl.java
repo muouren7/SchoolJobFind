@@ -1,6 +1,9 @@
 package com.example.schooljobfind.Common.Service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.example.schooljobfind.Common.Mapper.JobMapper;
+import com.example.schooljobfind.Common.Service.JobService;
+import com.example.schooljobfind.Common.entity.Job;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,6 +1,7 @@
 package com.example.schooljobfind.Common.Service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.schooljobfind.Common.entity.Company;
 
 
 /**

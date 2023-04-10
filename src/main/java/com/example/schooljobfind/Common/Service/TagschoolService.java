@@ -1,6 +1,7 @@
 package com.example.schooljobfind.Common.Service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.schooljobfind.Common.entity.Tagschool;
 
 
 /**
@@ -11,4 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface TagschoolService extends IService<Tagschool> {
 
+    Boolean test();
 }

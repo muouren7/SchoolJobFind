@@ -1,6 +1,8 @@
 package com.example.schooljobfind.Common.Mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.schooljobfind.Common.entity.Careertalk;
+import org.apache.ibatis.annotations.Mapper;
 
 
 /**
