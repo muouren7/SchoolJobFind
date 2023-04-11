@@ -22,7 +22,7 @@ public class WebConfig implements WebMvcConfigurer {
                 //设置允许跨域请求的域名
                 .allowedOrigins("*")
                 //是否允许带cookie
-                .allowCredentials(true)
+                .allowCredentials(false)
                 //允许的请求方式
                 .allowedMethods("GET","POST","DELETE","PUT")
                 //允许的请求头

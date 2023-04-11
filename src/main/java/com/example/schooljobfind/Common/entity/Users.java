@@ -2,6 +2,8 @@ package com.example.schooljobfind.Common.entity;
 
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +22,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("users")
 public class Users  {
     //用户编号@TableId
+    @TableId(value="uid",type = IdType.AUTO)
     private Long uid;
 
     //用户名

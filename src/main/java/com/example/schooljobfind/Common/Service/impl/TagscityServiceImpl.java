@@ -15,9 +15,6 @@ import org.springframework.stereotype.Service;
  */
 @Service("tagscityService")
 public class TagscityServiceImpl extends ServiceImpl<TagscityMapper, Tagscity> implements TagscityService {
-    @Override
-    public Boolean test() {
-        return null;
-    }
+
 }
 

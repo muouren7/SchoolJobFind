@@ -3,11 +3,15 @@ package com.example.schooljobfind.Common.entity;
 import java.util.Date;
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import org.springframework.format.annotation.DateTimeFormat;
+
 /**
  * 录取结果表(Result)表实体类
  *
@@ -21,6 +25,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("result")
 public class Result  {
     //录取记录编号@TableId
+    @TableId(value="id",type = IdType.AUTO)
     private Long id;
 
     //面试邀约编号
@@ -32,6 +37,7 @@ public class Result  {
     //结果信息
     private String msg;
     //时间
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date time;
     //逻辑删除
 //0：表示未被删除

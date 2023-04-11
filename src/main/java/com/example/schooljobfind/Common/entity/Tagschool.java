@@ -2,6 +2,8 @@ package com.example.schooljobfind.Common.entity;
 
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,12 +22,13 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("tagschool")
 public class Tagschool  {
     //记录编号@TableId
+    @TableId(value="tsid",type = IdType.AUTO)
     private Integer tsid;
 
     //学校名称
-    private String name;
+    private String tname;
     //级别
-    private String rank;
+    private String trank;
 
 
 

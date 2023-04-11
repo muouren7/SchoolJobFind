@@ -14,9 +14,6 @@ import org.springframework.stereotype.Service;
  */
 @Service("tagschoolService")
 public class TagschoolServiceImpl extends ServiceImpl<TagschoolMapper, Tagschool> implements TagschoolService {
-    @Override
-    public Boolean test() {
-        return null;
-    }
+
 }
 

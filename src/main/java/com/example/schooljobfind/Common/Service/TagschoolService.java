@@ -12,5 +12,5 @@ import com.example.schooljobfind.Common.entity.Tagschool;
  */
 public interface TagschoolService extends IService<Tagschool> {
 
-    Boolean test();
+
 }

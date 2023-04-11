@@ -3,11 +3,15 @@ package com.example.schooljobfind.Common.entity;
 import java.util.Date;
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import org.springframework.format.annotation.DateTimeFormat;
+
 /**
  * 双选会信息表(Careertalk)表实体类
  *
@@ -21,11 +25,13 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("careertalk")
 public class Careertalk  {
     //双选会编号@TableId
+    @TableId(value="id",type = IdType.AUTO)
     private Long id;
 
     //双选会名称
     private String title;
     //举办时间
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date time;
     //举办地址
     private String addr;

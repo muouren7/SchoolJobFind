@@ -1,7 +1,12 @@
 package com.example.schooljobfind.Common.Service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.schooljobfind.Common.Resp.Result;
+import com.example.schooljobfind.Common.Resp.ResultList;
 import com.example.schooljobfind.Common.entity.Derecord;
+import com.example.schooljobfind.Common.entity.vo.DerecordVo;
+import com.example.schooljobfind.Common.entity.vo.SDerecordVo;
+import com.example.schooljobfind.Common.entity.vo.UsersVo;
 
 
 /**
@@ -12,4 +17,7 @@ import com.example.schooljobfind.Common.entity.Derecord;
  */
 public interface DerecordService extends IService<Derecord> {
 
+    Result<DerecordVo> senddercord(DerecordVo vo);
+
+    ResultList<SDerecordVo> getmyderecord(UsersVo vo);
 }

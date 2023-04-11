@@ -1,40 +1,26 @@
-package com.example.schooljobfind.Common.entity;
+package com.example.schooljobfind.Common.entity.vo;
 
-import java.util.Date;
-
-import java.io.Serializable;
-
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import org.springframework.format.annotation.DateTimeFormat;
 
-/**
- * 职位表(Job)表实体类
- *
- * @author makejava
- * @since 2023-04-09 17:36:45
- */
-@SuppressWarnings("serial")
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("job")
-public class Job  {
-    //职位编号@TableId
-    @TableId(value="jid",type = IdType.AUTO)
-    private Long jid;
+public class JobVo {
+    @JsonProperty("jid")
+    private String jid;
 
     //职位名称
     private String title;
     //描述
     private String jdesc;
     //发布时间
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date createtime;
+    private String createtime;
     //职位状态
 //0：表示招聘中
 //1：表示停止招聘
@@ -52,9 +38,9 @@ public class Job  {
     //备注
     private String remark;
     //企业用户发布者id
-    private Long bid;
+    private String bid;
     //公司编号
-    private Long cid;
+    private String cid;
     //工作地点地址
     private String addr;
     //经纬度x
@@ -66,8 +52,5 @@ public class Job  {
 //1：表示删除
     private Integer deleted;
     //所属城市id
-    private Long cuid;
-
-
-
+    private String cuid;
 }

@@ -2,6 +2,8 @@ package com.example.schooljobfind.Common.entity;
 
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,12 +22,13 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("company")
 public class Company  {
     //公司编号@TableId
+    @TableId(value="cid",type = IdType.AUTO)
     private Long cid;
 
     //公司名称
     private String name;
     //简介
-    private String desc;
+    private String cdesc;
     //地址
     private String addr;
     //电话

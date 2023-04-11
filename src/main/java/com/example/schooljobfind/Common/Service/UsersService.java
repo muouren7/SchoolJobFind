@@ -1,7 +1,10 @@
 package com.example.schooljobfind.Common.Service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.schooljobfind.Common.Resp.Result;
 import com.example.schooljobfind.Common.entity.Users;
+import com.example.schooljobfind.Common.entity.dio.Usersdio;
+import com.example.schooljobfind.Common.entity.vo.UsersVo;
 
 
 /**
@@ -12,4 +15,8 @@ import com.example.schooljobfind.Common.entity.Users;
  */
 public interface UsersService extends IService<Users> {
     Boolean test();
+
+    Result<UsersVo> login(Users user);
+
+    Result<UsersVo> updatePwd(Usersdio usersdio);
 }

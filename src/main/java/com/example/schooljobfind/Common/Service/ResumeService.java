@@ -1,7 +1,11 @@
 package com.example.schooljobfind.Common.Service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.schooljobfind.Common.Resp.Result;
 import com.example.schooljobfind.Common.entity.Resume;
+import com.example.schooljobfind.Common.entity.dio.Usersdio;
+import com.example.schooljobfind.Common.entity.vo.ResumeVo;
+import com.example.schooljobfind.Common.entity.vo.UsersVo;
 
 
 /**
@@ -12,4 +16,7 @@ import com.example.schooljobfind.Common.entity.Resume;
  */
 public interface ResumeService extends IService<Resume> {
 
+    Result<ResumeVo> getmyre(UsersVo u);
+
+    Result<ResumeVo> updateResume(ResumeVo resumeVo);
 }

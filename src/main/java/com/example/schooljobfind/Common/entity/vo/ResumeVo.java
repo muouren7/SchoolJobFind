@@ -1,32 +1,17 @@
-package com.example.schooljobfind.Common.entity;
+package com.example.schooljobfind.Common.entity.vo;
 
-import java.util.Date;
-
-import java.io.Serializable;
-
-import com.baomidou.mybatisplus.annotation.IdType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import org.springframework.format.annotation.DateTimeFormat;
 
-/**
- * 简历表(Resume)表实体类
- *
- * @author makejava
- * @since 2023-04-09 17:37:16
- */
-@SuppressWarnings("serial")
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("resume")
-public class Resume  {
-    //简历id@TableId
-    @TableId(value="rid",type = IdType.AUTO)
-    private Long rid;
+public class ResumeVo {
+    private String rid;
 
     //姓名
     private String name;
@@ -55,9 +40,6 @@ public class Resume  {
     private String reurl;
     //备注
     private String remark;
-    
-    private Long sid;
 
-
-
+    private String sid;
 }

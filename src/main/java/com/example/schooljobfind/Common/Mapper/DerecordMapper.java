@@ -3,6 +3,7 @@ package com.example.schooljobfind.Common.Mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.schooljobfind.Common.entity.Derecord;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 
 /**
@@ -13,5 +14,6 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface DerecordMapper extends BaseMapper<Derecord> {
+
 
 }

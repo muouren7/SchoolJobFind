@@ -1,7 +1,9 @@
 package com.example.schooljobfind.Common.Service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.schooljobfind.Common.Resp.Result;
 import com.example.schooljobfind.Common.entity.Interview;
+import com.example.schooljobfind.Common.entity.vo.InterViewVo;
 
 
 /**
@@ -12,4 +14,5 @@ import com.example.schooljobfind.Common.entity.Interview;
  */
 public interface InterviewService extends IService<Interview> {
 
+    Result<InterViewVo> addInterView(InterViewVo vo);
 }

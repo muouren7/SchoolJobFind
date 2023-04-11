@@ -1,42 +1,23 @@
-package com.example.schooljobfind.Common.entity;
+package com.example.schooljobfind.Common.entity.dio;
 
-import java.util.Date;
-
-import java.io.Serializable;
-
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import org.springframework.format.annotation.DateTimeFormat;
 
-/**
- * 学生表(Student)表实体类
- *
- * @author makejava
- * @since 2023-04-09 17:33:02
- */
-@SuppressWarnings("serial")
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("student")
-public class Student  {
-    //学生id  @TableId
-    @TableId(value="sid",type = IdType.AUTO)
-    private Long sid;
-
+public class Studentdio {
+    private String sid;
     //姓名
     private String name;
-    //性别  
-//0：男
-//1：女
+    //性别
     private Integer sex;
     //出生日期
-    //@DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX")
     private Date birth;
     //电话
     private String phone;
@@ -59,5 +40,4 @@ public class Student  {
 //1：表示被冻结
     private Integer freeze;
     private String grade;
-
 }
